@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a mi página web</h1>
+  </header>
+  <main>
+    <p>Esta es una página de ejemplo.</p>
+  </main>
+  <footer>
+    <p>&copy; 2023 - Mi Página Web</p>
+  </footer>
+  <srcript src="script.js" </srcript>
+</body>
+</html>
+```
+
+2. **styles.css** (CSS):
+```css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+```
+
+3. **script.js** (JavaScript):
+```javascript
+// Puedes agregar código JavaScript aquí si es necesario
+```
+
+4. **contact.php** (PHP):
+```php
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contacta con nosotros</h1>
+  </header>
+  <main>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $nombre = $_POST["nombre"];
+      $email = $_POST["email"];
+      $mensaje = $_POST["mensaje"];
+
+      // Aquí podrías procesar los datos del formulario, enviar correos, etc.
+      // Por simplicidad, aquí solo mostraremos un mensaje de confirmación.
+      echo "<p>¡Gracias por tu mensaje, $nombre! Te responderemos pronto.</p>";
+    }
+    ?>
+    <form method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" required>
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 - Mi Página Web</p>
+  </footer>
+</body>
+</html>
+```
+
+Recuerda que estos son solo ejemplos y es importante comprender cómo funcionan cada uno de estos componentes para personalizarlos y expandirlos según tus necesidades. Puedes colocar estos archivos en una carpeta en tu servidor web local y acceder a ellos a través de un navegador para ver el resultado.
